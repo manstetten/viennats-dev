@@ -12,7 +12,7 @@
 #include <boost/spirit/include/phoenix_fusion.hpp>
 #include <boost/spirit/include/phoenix_stl.hpp>
 #include <boost/variant/recursive_variant.hpp>
-#include <boost/filesystem.hpp>
+// #include <boost/filesystem.hpp>
 
 #include <iostream>
 #include <sstream>
@@ -795,11 +795,11 @@ struct ReportError {
             oss << output_path;
           oss <<  "_" << bits_per_distance << "bit/";
           output_path = oss.str();
-          if(!boost::filesystem::exists(output_path)) {
-              msg::print_message("Output directory not found! Creating new directory: "+output_path+"\n");
-                        boost::filesystem::path dir(output_path);
-                        if(!boost::filesystem::create_directory(dir)) msg::print_error("Could not create directory!");
-          }
+        //   if(!boost::filesystem::exists(output_path)) {
+        //       msg::print_message("Output directory not found! Creating new directory: "+output_path+"\n");
+        //                 boost::filesystem::path dir(output_path);
+        //                 if(!boost::filesystem::create_directory(dir)) msg::print_error("Could not create directory!");
+        //   }
         }
 
         //test boundary condtions for periodicity, and check conformity

@@ -68,6 +68,10 @@
 #include <omp.h>
 #endif
 
+// PAUL: https://stackoverflow.com/questions/31110409/boost-error-code-header-only-does-not-have-the-advertised-effect
+#define BOOST_ERROR_CODE_HEADER_ONLY
+#include <boost/system/error_code.hpp>
+
 #include "Parameters.h"
 
 #ifdef PROCESS_CONSTANT_RATES
